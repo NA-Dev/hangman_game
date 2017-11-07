@@ -62,12 +62,20 @@
                   <span id="phraseDisp"></span>
                 </h3>
               </div>
-              <div class="col-12 mt-3 text-center">
-                <form class="form-inlinetext-centered pt-3 pb-3" action="#" onSubmit="newGuess();return false"">
+              <div id="input" class="col-12 mt-3 text-center">
+                <form class="form-inlinetext-centered pt-3 pb-3" action="#" onSubmit="newGuess();return false">
                   <label class="sr-only" for="newGuessForm"></label>
-                  <input class="pb-1" id="newLetter" type="text" placeholder=" enter a letter" size="10" pattern="[A-Za-z]{1}" onkeyup="validateLetter(this);">
+                  <input class="pb-1" id="newLetter" type="text" placeholder=" enter a letter" size="10" pattern="[A-Za-z]{1}" onkeyup="validateLetter();">
                   <button class="btn btn-primary btn-sm" type="submit">Guess</button>
                 </form>
+              </div>
+              <div id="win" class="col-12 mt-3 text-center">
+                <h3>You Win! But Hang(out)man did not make it to his hammock.</h3>
+                <button class="btn btn-primary btn-sm" type="button" onclick="window.location.reload()">Play again?</button>
+              </div>
+              <div id="lose" class="col-12 mt-3 text-center">
+                <h3>You lose. But Hang(out)man is on vacation!</h3>
+                <button class="btn btn-primary btn-sm" type="button" onclick="window.location.reload()">Play again?</button>
               </div>
               <div class="col-12 mt-3">
                 <p>

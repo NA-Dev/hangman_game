@@ -81,8 +81,9 @@ aside img {
 
 /*sizing and positioning of hangman image*/
 .frame {
+    margin: auto;
     overflow: hidden;
-    width: 100%;
+    width: 75%;
 }
 
 #hangman-img {
