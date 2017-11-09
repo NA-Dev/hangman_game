@@ -13,7 +13,6 @@ function setup() {
     guessedLet = [];
     unguessedLet = abc;
     //start with 6 'lives' or attempts
-    //lose one attempt for each incorrect guess
     attempts = 6;
     //hide win and lose statements, show input
     document.getElementById('lose').style.display = 'none';
