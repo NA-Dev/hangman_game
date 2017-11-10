@@ -18,12 +18,12 @@ function setup() {
     document.getElementById('lose').style.display = 'none';
     document.getElementById('win').style.display = 'none';
     document.getElementById('input').style.display = 'block';
-    console.log('setupExecuted');
+    // console.log('setupExecuted');
 }
 
 //select a random phrase from allPhrases
 phrase = allPhrases[Math.floor(Math.random()*(allPhrases.length - 1))]; //length or length-1?
-console.log(phrase);
+// console.log(phrase);
 
 //hide unguessed letters in phraseHidden
 phraseHidden = hide(phrase);
@@ -36,10 +36,10 @@ function hide(x) {
             }
         }
     }
-    console.log('hideExecuted');
+    // console.log('hideExecuted');
     return x;
 }
-console.log(phraseHidden);
+// console.log(phraseHidden);
 
 refreshDisp();
 
@@ -49,7 +49,7 @@ function refreshDisp() {
     document.getElementById('attemptsRem').innerHTML = attempts;
     document.getElementById('guessed').innerHTML = guessedLet.join(', ');
     document.getElementById('unguessed').innerHTML = unguessedLet.join(', ');
-    console.log('refreshDispExecuted');
+    // console.log('refreshDispExecuted');
 }
 
 //execute validation upon keyup within HTML input form
@@ -57,7 +57,7 @@ function validateLetter() {
     textInput = document.getElementById('newLetter').value;
     textInput = textInput.replace(/\W|\d/g, '').substr(0, 1).toUpperCase();
     document.getElementById('newLetter').value = textInput;
-    console.log('validateLetter')
+    // console.log('validateLetter')
 }
 
 //execute guess entry script upon click of HTML form submit button
@@ -68,32 +68,32 @@ function newGuess() {
     const index3 = phrase.indexOf(letter);
     //if the letter is a new guess
     if (index1 !== -1 && index2 == -1) {
-        console.log('new guess');
+        // console.log('new guess');
         //then remove letter from unguessed, and add to guessed
         unguessedLet.splice(index1,1);
         guessedLet.push(letter);
         //then, if the new letter is not in phrase, take away an attempt and go to next image frame
         if (index3 == -1) {
-            console.log('notInPhrase');
+            // console.log('notInPhrase');
             attempts--;
             document.getElementById('hangman-img').style.marginLeft = '-' + ((6 - attempts)*100) + '%';
         } else {
         //if the new letter is in the phrase, reveal it using hide() again
 
            phraseHidden = hide(phrase);
-           console.log('inPhrase');
-           console.log(phraseHidden);
+           // console.log('inPhrase');
+           // console.log(phraseHidden);
         }
-        console.log(attempts);
+        // console.log(attempts);
     } else {
-        console.log('notNewGuess');
-        console.log(attempts);
+        // console.log('notNewGuess');
+        // console.log(attempts);
     }
     //clear letter from HTML form
     document.getElementById('newLetter').value = '';
     //refresh HTML displayed variables
     refreshDisp();
-    console.log('newGuessExecuted')
+    // console.log('newGuessExecuted')
     checkWin();
 }
 
@@ -115,4 +115,5 @@ function checkWin() {
     else {
     }
 }
+
 
