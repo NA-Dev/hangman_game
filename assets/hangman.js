@@ -4,8 +4,6 @@
 
 var allPhrases, abc, guessedLet, unguessedLet, attempts, phrase, phraseHidden, textInput, letter;
 
-window.onload = setup();
-
 function setup() {
     // starting phrase options and alphabet
     allPhrases = ['CATCH SOME RAYS', 'HANG TEN', 'WALK ALONG THE SHORE', 'CRASHING WAVES', 'SEAFOAM GREEN', 'CONCH SHELL', 'NAUTILUS SHELL', 'BIKINIS AND TRUNKS', 'BUILD A SANDCASTLE', 'APPLY SUNSCREEN', 'WEAR YOUR FLIP-FLOPS', 'SCUBA WITH SHARKS', 'GROOVY MUSIC', 'BOARDWALK FISHING'];
@@ -22,7 +20,7 @@ function setup() {
 }
 
 //select a random phrase from allPhrases
-phrase = allPhrases[Math.floor(Math.random()*(allPhrases.length - 1))]; //length or length-1?
+phrase = allPhrases[Math.floor(Math.random()*(allPhrases.length))];
 // console.log(phrase);
 
 //hide unguessed letters in phraseHidden
@@ -41,7 +39,7 @@ function hide(x) {
 }
 // console.log(phraseHidden);
 
-refreshDisp();
+
 
 //refresh HTML
 function refreshDisp() {
@@ -115,5 +113,6 @@ function checkWin() {
     else {
     }
 }
+
 
 
