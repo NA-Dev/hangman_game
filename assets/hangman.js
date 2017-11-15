@@ -4,6 +4,8 @@
 
 var allPhrases, abc, guessedLet, unguessedLet, attempts, phrase, phraseHidden, textInput, letter;
 
+window.onload = setup();
+
 function setup() {
     // starting phrase options and alphabet
     allPhrases = ['CATCH SOME RAYS', 'HANG TEN', 'WALK ALONG THE SHORE', 'CRASHING WAVES', 'SEAFOAM GREEN', 'CONCH SHELL', 'NAUTILUS SHELL', 'BIKINIS AND TRUNKS', 'BUILD A SANDCASTLE', 'APPLY SUNSCREEN', 'WEAR YOUR FLIP-FLOPS', 'SCUBA WITH SHARKS', 'GROOVY MUSIC', 'BOARDWALK FISHING'];
@@ -39,7 +41,7 @@ function hide(x) {
 }
 // console.log(phraseHidden);
 
-
+refreshDisp();
 
 //refresh HTML
 function refreshDisp() {
@@ -102,11 +104,7 @@ function checkWin() {
         document.getElementById('input').style.display = 'none';
         document.getElementById('lose').style.display = 'block';
     }
-    else if ((index == -1) && (attempts == 0)) {
-        document.getElementById('input').style.display = 'none';
-        document.getElementById('win').style.display = 'block';
-    }
-    else if ((index == -1) && (attempts > 0)) {
+    else if ((index == -1) && (attempts >= 0)) {
         document.getElementById('input').style.display = 'none';
         document.getElementById('win').style.display = 'block';
     }
