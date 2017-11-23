@@ -4,7 +4,9 @@
 
 var allPhrases, abc, guessedLet, unguessedLet, attempts, phrase, phraseHidden, textInput, letter;
 
-window.onload = setup();
+$(document).ready(function() {
+    setup();
+});
 
 function setup() {
     // starting phrase options and alphabet
