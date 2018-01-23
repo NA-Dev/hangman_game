@@ -14,9 +14,9 @@ function setup() {
     abc = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
     guessedLet = [];
     unguessedLet = abc;
-    //start with 6 'lives' or attempts
+    // start with 6 'lives' or attempts
     attempts = 6;
-    //hide win and lose statements, show input
+    // hide win and lose statements, show input
     document.getElementById('lose').style.display = 'none';
     document.getElementById('win').style.display = 'none';
     document.getElementById('input').style.display = 'block';
@@ -71,7 +71,7 @@ function newGuess() {
     //if the letter is a new guess
     if (index1 !== -1 && index2 == -1) {
         // console.log('new guess');
-        //then remove letter from unguessed, and add to guessed
+        // then remove letter from unguessed, and add to guessed
         unguessedLet.splice(index1,1);
         guessedLet.push(letter);
         //then, if the new letter is not in phrase, take away an attempt and go to next image frame
