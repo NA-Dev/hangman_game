@@ -9,19 +9,21 @@ $(document).ready(function() {
 });
 
 function setup() {
-    // starting phrase options and alphabet
-    allPhrases = ['CATCH SOME RAYS', 'HANG TEN', 'WALK ALONG THE SHORE', 'CRASHING WAVES', 'SEAFOAM GREEN', 'CONCH SHELL', 'NAUTILUS SHELL', 'BIKINIS AND TRUNKS', 'BUILD A SANDCASTLE', 'APPLY SUNSCREEN', 'WEAR YOUR FLIP-FLOPS', 'SCUBA WITH SHARKS', 'GROOVY MUSIC', 'BOARDWALK FISHING'];
-    abc = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-    guessedLet = [];
-    unguessedLet = abc;
-    // start with 6 'lives' or attempts
-    attempts = 6;
+
     // hide win and lose statements, show input
     document.getElementById('lose').style.display = 'none';
     document.getElementById('win').style.display = 'none';
     document.getElementById('input').style.display = 'block';
     // console.log('setupExecuted');
 }
+
+// starting phrase options and alphabet
+allPhrases = ['CATCH SOME RAYS', 'HANG TEN', 'WALK ALONG THE SHORE', 'CRASHING WAVES', 'SEAFOAM GREEN', 'CONCH SHELL', 'NAUTILUS SHELL', 'BIKINIS AND TRUNKS', 'BUILD A SANDCASTLE', 'APPLY SUNSCREEN', 'WEAR YOUR FLIP-FLOPS', 'SCUBA WITH SHARKS', 'GROOVY MUSIC', 'BOARDWALK FISHING'];
+abc = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+guessedLet = [];
+unguessedLet = abc;
+// start with 6 'lives' or attempts
+attempts = 6;
 
 //select a random phrase from allPhrases
 phrase = allPhrases[Math.floor(Math.random()*(allPhrases.length))];
